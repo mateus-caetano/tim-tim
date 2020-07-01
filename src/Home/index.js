@@ -39,7 +39,7 @@ export default function Home() {
   const Profile = () => <SvgXml xml={profile} width="35" height="35" />;
 
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1 }}>
       <View style={styles.header}>
         <Menu />
         <TextInput placeholder="Onde quer ir hoje?" />
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     height: 300,
     flexDirection: 'column',
     alignItems: 'flex-start',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
     marginTop: 0,
     alignSelf: 'center',
   },
