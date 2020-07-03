@@ -5,11 +5,14 @@ import {
   TextInput,
   Text,
   TouchableOpacity,
+  ImageBackground,
   StyleSheet,
   Dimensions,
   StatusBar,
 } from 'react-native';
 import { SvgXml } from 'react-native-svg';
+
+const width = Dimensions.get('window').width - 20;
 
 const categories = ['Próximo', 'Popular', 'Mais Barato', 'Musica', 'Família'];
 
@@ -34,101 +37,390 @@ const profile = `
 </svg>
 `;
 
+const bar = `<svg width="30" height="3" viewBox="0 0 30 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="1.5" y1="1.5" x2="28.5" y2="1.5" stroke="#666666" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`;
+
+const reactions = `<svg width="68" height="21" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M67.2547 6.17603L61.9597 8.62426L56.6647 11.0725" stroke="#3D3D3D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M67.2547 6.17601L57.1511 18.4431L56.6646 11.0725L51.3644 5.92753L67.2547 6.17601Z" stroke="#3D3D3D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41 11.0833C41.0028 12.1832 40.7459 13.2682 40.25 14.25C39.662 15.4265 38.7581 16.416 37.6395 17.1077C36.5209 17.7995 35.2319 18.1662 33.9167 18.1667C32.8168 18.1695 31.7318 17.9126 30.75 17.4167L26 19L27.5833 14.25C27.0874 13.2682 26.8305 12.1832 26.8333 11.0833C26.8338 9.76815 27.2005 8.47906 27.8923 7.36048C28.584 6.24189 29.5735 5.33799 30.75 4.75002C31.7318 4.25413 32.8168 3.99716 33.9167 4.00002H34.3333C36.0703 4.09585 37.7109 4.82899 38.9409 6.05907C40.171 7.28915 40.9041 8.92973 41 10.6667V11.0833Z" stroke="#3D3D3D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.81046 18.9999H2.52419C2.11995 18.9999 1.73226 18.8419 1.44642 18.5606C1.16058 18.2793 1 17.8977 1 17.4999V12.2499C1 11.8521 1.16058 11.4706 1.44642 11.1893C1.73226 10.908 2.11995 10.75 2.52419 10.75H4.81046M10.1451 9.24997V6.24999C10.1451 5.65325 9.90424 5.08096 9.47548 4.65901C9.04672 4.23705 8.46519 4 7.85883 4L4.81046 10.75V18.9999H13.4069C13.7744 19.004 14.1311 18.8772 14.4112 18.6429C14.6913 18.4086 14.8759 18.0826 14.9311 17.7249L15.9827 10.975C16.0159 10.76 16.0012 10.5405 15.9396 10.3316C15.878 10.1228 15.771 9.92968 15.626 9.7656C15.481 9.60151 15.3015 9.47041 15.0999 9.38138C14.8983 9.29234 14.6795 9.2475 14.4586 9.24997H10.1451Z" stroke="#3D3D3D" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`;
+
 export default function Home() {
-  const Menu = () => <SvgXml xml={menu} width="35" height="35" />;
+  const Menu = () => <SvgXml xml={menu} width="30" height="30" />;
   const Profile = () => <SvgXml xml={profile} width="35" height="35" />;
+  const Bar = () => <SvgXml xml={bar} />;
+  const Reactions = () => <SvgXml xml={reactions} />;
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
+    <View style={{}}>
+      <View
+        style={{
+          backgroundColor: '#fff',
+          width,
+          marginTop: StatusBar.currentHeight,
+          padding: 20,
+          elevation: 3,
+          alignItems: 'center',
+          borderRadius: 8,
+          alignSelf: 'center',
+        }}
+      >
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View style={{ alignItems: 'center' }}>
+            <View
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: 25,
+                backgroundColor: '#949494',
+                marginHorizontal: 5,
+              }}
+            ></View>
+            <Text style={{}}>Fulano</Text>
+          </View>
+          <View style={{ alignItems: 'center' }}>
+            <View
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: 25,
+                backgroundColor: '#949494',
+                marginHorizontal: 5,
+              }}
+            ></View>
+            <Text style={{}}>Fulano</Text>
+          </View>
+          <View style={{ alignItems: 'center' }}>
+            <View
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: 25,
+                backgroundColor: '#949494',
+                marginHorizontal: 5,
+              }}
+            ></View>
+            <Text style={{}}>Fulano</Text>
+          </View>
+          <View style={{ alignItems: 'center' }}>
+            <View
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: 25,
+                backgroundColor: '#949494',
+                marginHorizontal: 5,
+              }}
+            ></View>
+            <Text style={{}}>Fulano</Text>
+          </View>
+          <View style={{ alignItems: 'center' }}>
+            <View
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: 25,
+                backgroundColor: '#949494',
+                marginHorizontal: 5,
+              }}
+            ></View>
+            <Text style={{}}>Fulano</Text>
+          </View>
+          <View style={{ alignItems: 'center' }}>
+            <View
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: 25,
+                backgroundColor: '#949494',
+                marginHorizontal: 5,
+              }}
+            ></View>
+            <Text style={{}}>Fulano</Text>
+          </View>
+        </ScrollView>
+        <TouchableOpacity style={{ marginTop: 25 }}>
+          <Bar />
+        </TouchableOpacity>
+      </View>
+
+      <View
+        style={{
+          width,
+          padding: 10,
+          alignSelf: 'center',
+          justifyContent: 'space-between',
+          flexDirection: 'row',
+          elevation: 2,
+          marginTop: 10,
+          borderTopLeftRadius: 10,
+          borderTopRightRadius: 9,
+          borderBottomLeftRadius: 9,
+          borderBottomRightRadius: 10,
+        }}
+      >
         <Menu />
-        <TextInput placeholder="Onde quer ir hoje?" />
+
+        <TextInput
+          placeholder="O que está procurando?"
+          style={{ fontSize: 17 }}
+        />
+
         <Profile />
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false} style={{}}>
-        <View style={[styles.header, styles.feedItem]}>
-          <Text style={styles.title}>Novidades</Text>
-          <View style={styles.figure}></View>
-        </View>
+      <ScrollView>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View
+            style={{
+              alignItems: 'center',
+              marginTop: 15,
+              marginHorizontal: 10,
+              justifyContent: 'center',
+              alignSelf: 'flex-start',
+            }}
+          >
+            <ImageBackground
+              source={{
+                uri:
+                  'https://scontent-for1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/101533501_692476641541109_8892123618431160644_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=IPbWSOX044AAX_DGuvu&oh=9b57e9824c2539a317209e213313bcbb&oe=5F2A6ED2',
+              }}
+              style={{ width: width * 0.8, height: width * 0.5 }}
+            />
 
-        <>
-          <Text style={styles.title}>Descubra novos lugares</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {categories.map((category, index) => (
-              <View
-                style={{
-                  backgroundColor: '#F3F5FA',
-                  padding: 12,
-                  marginRight: 20,
-                  marginVertical: 10,
-                  marginLeft: index === 0 ? 10 : 0,
-                }}
-                key={index.toString()}
-              >
-                <Text>{category}</Text>
-              </View>
-            ))}
-          </ScrollView>
-        </>
-        <View style={[styles.header, styles.feedItem]}>
-          <Text style={styles.title}>Feito para você</Text>
-          <View style={styles.figure}>
-            <TouchableOpacity
-              style={{ position: 'absolute', bottom: 10, right: 10 }}
+            <Text
+              style={{
+                color: '#fff',
+                position: 'absolute',
+                fontSize: 30,
+                fontWeight: 'bold',
+              }}
             >
-              <Text style={{ color: 'blue' }}>Todos os lugares -></Text>
-            </TouchableOpacity>
+              Destaques
+            </Text>
           </View>
+
+          <View
+            style={{
+              alignItems: 'center',
+              marginTop: 15,
+              marginHorizontal: 10,
+              justifyContent: 'center',
+              alignSelf: 'flex-start',
+            }}
+          >
+            <ImageBackground
+              source={{
+                uri:
+                  'https://scontent-for1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/101533501_692476641541109_8892123618431160644_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=IPbWSOX044AAX_DGuvu&oh=9b57e9824c2539a317209e213313bcbb&oe=5F2A6ED2',
+              }}
+              style={{ width: width * 0.8, height: width * 0.5 }}
+            />
+
+            <Text
+              style={{
+                color: '#fff',
+                position: 'absolute',
+                fontSize: 30,
+                fontWeight: 'bold',
+              }}
+            >
+              Recomendações
+            </Text>
+          </View>
+
+          <View
+            style={{
+              alignItems: 'center',
+              marginTop: 15,
+              marginHorizontal: 10,
+              justifyContent: 'center',
+              alignSelf: 'flex-start',
+            }}
+          >
+            <ImageBackground
+              source={{
+                uri:
+                  'https://scontent-for1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/101533501_692476641541109_8892123618431160644_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=IPbWSOX044AAX_DGuvu&oh=9b57e9824c2539a317209e213313bcbb&oe=5F2A6ED2',
+              }}
+              style={{ width: width * 0.8, height: width * 0.5 }}
+            />
+
+            <Text
+              style={{
+                color: '#fff',
+                position: 'absolute',
+                fontSize: 30,
+                fontWeight: 'bold',
+              }}
+            >
+              Eventos
+            </Text>
+          </View>
+        </ScrollView>
+
+        <View style={{}}>
+          <Text
+            style={{
+              color: '#666666',
+              fontWeight: 'bold',
+              fontSize: 18,
+              marginVertical: 12,
+              marginLeft: 10,
+            }}
+          >
+            Descubra novos lugares
+          </Text>
+
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <TouchableOpacity
+              style={{
+                width: width * 0.8,
+                height: 40,
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginLeft: 10,
+                elevation: 1,
+                borderRadius: 1,
+              }}
+            >
+              <Text>Todos os locais</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={{
+                width: width * 0.8,
+                height: 40,
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginLeft: 10,
+                elevation: 1,
+                borderRadius: 1,
+              }}
+            >
+              <Text>Todos os eventos</Text>
+            </TouchableOpacity>
+          </ScrollView>
         </View>
 
-        <View style={[styles.header, styles.feedItem]}>
-          <Text style={styles.title}>Eventos</Text>
-          <View style={styles.figure}>
-            <TouchableOpacity
-              style={{ position: 'absolute', bottom: 10, right: 10 }}
+        <View>
+          <View
+            style={{
+              marginVertical: 15,
+              marginBottom: 10,
+              width,
+              alignSelf: 'center',
+              elevation: 1,
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 9,
+              borderBottomLeftRadius: 9,
+              borderBottomRightRadius: 10,
+              padding: 20,
+            }}
+          >
+            <View
+              style={{
+                flexDirection: 'row',
+                marginBottom: 10,
+              }}
             >
-              <Text style={{ color: 'blue' }}>Todos os eventos -></Text>
-            </TouchableOpacity>
+              <Profile />
+              <View style={{ marginLeft: 12 }}>
+                <Text style={{}}>Fulano</Text>
+
+                <Text>aculá</Text>
+              </View>
+            </View>
+
+            <ImageBackground
+              source={require('../assets/amigos.png')}
+              style={{ width: width * 0.9, height: 200 }}
+            />
+            <View style={{ marginTop: 10, alignSelf: 'flex-end' }}>
+              <Reactions />
+            </View>
+          </View>
+
+          <View
+            style={{
+              marginVertical: 15,
+              marginBottom: 10,
+              width,
+              alignSelf: 'center',
+              elevation: 1,
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 9,
+              borderBottomLeftRadius: 9,
+              borderBottomRightRadius: 10,
+              padding: 20,
+            }}
+          >
+            <View
+              style={{
+                flexDirection: 'row',
+                marginBottom: 10,
+              }}
+            >
+              <Profile />
+              <View style={{ marginLeft: 12 }}>
+                <Text style={{}}>Fulano</Text>
+
+                <Text>aculá</Text>
+              </View>
+            </View>
+
+            <ImageBackground
+              source={require('../assets/amigos.png')}
+              style={{ width: width * 0.9, height: 200 }}
+            />
+            <View style={{ marginTop: 10, alignSelf: 'flex-end' }}>
+              <Reactions />
+            </View>
+          </View>
+
+          <View
+            style={{
+              marginVertical: 15,
+              marginBottom: 10,
+              width,
+              alignSelf: 'center',
+              elevation: 1,
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 9,
+              borderBottomLeftRadius: 9,
+              borderBottomRightRadius: 10,
+              padding: 20,
+            }}
+          >
+            <View
+              style={{
+                flexDirection: 'row',
+                marginBottom: 10,
+              }}
+            >
+              <Profile />
+              <View style={{ marginLeft: 12 }}>
+                <Text style={{}}>Fulano</Text>
+
+                <Text>aculá</Text>
+              </View>
+            </View>
+
+            <ImageBackground
+              source={require('../assets/amigos.png')}
+              style={{ width: width * 0.9, height: 200 }}
+            />
+            <View style={{ marginTop: 10, alignSelf: 'flex-end' }}>
+              <Reactions />
+            </View>
           </View>
         </View>
       </ScrollView>
     </View>
   );
 }
-
-const width = Dimensions.get('window').width - 20;
-
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#F3F5FA',
-    height: 50,
-    width,
-    marginTop: StatusBar.currentHeight + 15,
-    marginBottom: 15,
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    flexDirection: 'row',
-  },
-
-  feedItem: {
-    height: 300,
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    backgroundColor: 'white',
-    marginTop: 0,
-    alignSelf: 'center',
-  },
-
-  figure: {
-    width,
-    height: 250,
-    backgroundColor: '#F3F5FA',
-    fontWeight: '900',
-  },
-
-  title: {
-    textAlign: 'left',
-    marginLeft: 15,
-  },
-});
