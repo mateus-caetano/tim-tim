@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './Home';
+import Places from './Places';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -19,8 +20,17 @@ function HomeScreen() {
 export default function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomeScreen" headerMode="none">
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Navigator initialRouteName="HomeScreen" mode>
+        <Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Places"
+          component={Places}
+          options={{ title: 'Todos os locais' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

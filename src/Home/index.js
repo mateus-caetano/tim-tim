@@ -10,6 +10,7 @@ import {
   Dimensions,
   StatusBar,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
 
 const width = Dimensions.get('window').width - 20;
@@ -51,13 +52,15 @@ const reactions = `<svg width="68" height="21" viewBox="0 0 68 21" fill="none" x
 `;
 
 export default function Home() {
+  const Navigation = useNavigation();
+
   const Menu = () => <SvgXml xml={menu} width="30" height="30" />;
   const Profile = () => <SvgXml xml={profile} width="35" height="35" />;
   const Bar = () => <SvgXml xml={bar} />;
   const Reactions = () => <SvgXml xml={reactions} />;
 
   return (
-    <View style={{}}>
+    <View style={{ backgroundColor: '#fff' }}>
       <View
         style={{
           backgroundColor: '#fff',
@@ -288,6 +291,7 @@ export default function Home() {
                 elevation: 1,
                 borderRadius: 1,
               }}
+              onPress={() => Navigation.navigate('Places')}
             >
               <Text>Todos os locais</Text>
             </TouchableOpacity>
