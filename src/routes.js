@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Home';
 import Places from './Places';
 import Place from './Place';
+import Reservations from './Reservations';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -38,6 +39,18 @@ export default function Routes() {
           name="PlaceProfile"
           component={Place}
           options={{ title: 'Bar' }}
+        />
+
+        <Stack.Screen
+          name="Reservations"
+          component={Reservations}
+          options={{ title: 'Pedidos e reservas' }}
+        />
+
+        <Stack.Screen
+          name="Order"
+          component={Reservations}
+          options={{ title: 'Pedir' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

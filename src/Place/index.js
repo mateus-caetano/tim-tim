@@ -66,6 +66,8 @@ const reactions = `<svg width="68" height="21" viewBox="0 0 68 21" fill="none" x
 `;
 
 export default function Place() {
+  const Navigation = useNavigation();
+
   const Stars = () => <SvgXml xml={stars} width="70" height="70" />;
   const Reservation = () => <SvgXml xml={reservation} width="70" height="70" />;
   const Chat = () => <SvgXml xml={chat} width="70" height="70" />;
@@ -100,6 +102,7 @@ export default function Place() {
       <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
         <TouchableOpacity
           style={{ padding: 10, elevation: 1, alignItems: 'center' }}
+          onPress={() => Navigation.navigate('Reservations')}
         >
           <Reservation />
           <Text>Pedidos e reservas</Text>
