@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './Home';
 import Places from './Places';
+import Place from './Place';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -26,10 +27,17 @@ export default function Routes() {
           component={HomeScreen}
           options={{ headerShown: false }}
         />
+
         <Stack.Screen
           name="Places"
           component={Places}
           options={{ title: 'Todos os locais' }}
+        />
+
+        <Stack.Screen
+          name="PlaceProfile"
+          component={Place}
+          options={{ title: 'Bar' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
