@@ -332,10 +332,7 @@ export default function Home() {
             }}
           >
             <ImageBackground
-              source={{
-                uri:
-                  'https://scontent-for1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/101533501_692476641541109_8892123618431160644_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=IPbWSOX044AAX_DGuvu&oh=9b57e9824c2539a317209e213313bcbb&oe=5F2A6ED2',
-              }}
+              source={require('../assets/destaques.jpg')}
               style={{ width: width * 0.8, height: width * 0.5 }}
             />
 
@@ -361,10 +358,7 @@ export default function Home() {
             }}
           >
             <ImageBackground
-              source={{
-                uri:
-                  'https://scontent-for1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/101533501_692476641541109_8892123618431160644_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=IPbWSOX044AAX_DGuvu&oh=9b57e9824c2539a317209e213313bcbb&oe=5F2A6ED2',
-              }}
+              source={require('../assets/destaques.jpg')}
               style={{ width: width * 0.8, height: width * 0.5 }}
             />
 
@@ -390,10 +384,7 @@ export default function Home() {
             }}
           >
             <ImageBackground
-              source={{
-                uri:
-                  'https://scontent-for1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/101533501_692476641541109_8892123618431160644_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=IPbWSOX044AAX_DGuvu&oh=9b57e9824c2539a317209e213313bcbb&oe=5F2A6ED2',
-              }}
+              source={require('../assets/destaques.jpg')}
               style={{ width: width * 0.8, height: width * 0.5 }}
             />
 

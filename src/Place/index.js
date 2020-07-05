@@ -77,7 +77,15 @@ export default function Place() {
 
   return (
     <ScrollView contentContainerStyle={{ justifyContent: 'center' }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          backgroundColor: '#fff',
+          borderTopWidth: 10,
+          borderColor: '#fff',
+        }}
+      >
         <View>
           <Text>Clientes</Text>
           <Text>200</Text>
@@ -95,7 +103,7 @@ export default function Place() {
       </View>
 
       <ImageBackground
-        source={require('../assets/destaques.jpg')}
+        source={require('../assets/pub.jpg')}
         style={{ width, height: 200, alignSelf: 'center' }}
       />
 
@@ -153,7 +161,7 @@ export default function Place() {
 
         <ScrollView horizontal pagingEnabled>
           <ImageBackground
-            source={require('../assets/destaques.jpg')}
+            source={require('../assets/event.jpg')}
             style={{ width, height: 200, alignSelf: 'center' }}
           />
           <ImageBackground

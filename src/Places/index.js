@@ -103,7 +103,7 @@ export default function Places() {
           </View>
 
           <ImageBackground
-            source={require('../assets/cerveja.png')}
+            source={require('../assets/pub.jpg')}
             style={{
               width: width * 0.9,
               height: width * 0.5,
@@ -145,7 +145,7 @@ export default function Places() {
           </View>
 
           <ImageBackground
-            source={require('../assets/cerveja.png')}
+            source={require('../assets/pub.jpg')}
             style={{
               width: width * 0.9,
               height: width * 0.5,
@@ -181,7 +181,7 @@ export default function Places() {
           </View>
 
           <ImageBackground
-            source={require('../assets/cerveja.png')}
+            source={require('../assets/pub.jpg')}
             style={{
               width: width * 0.9,
               height: width * 0.5,
@@ -216,7 +216,7 @@ export default function Places() {
           </View>
 
           <ImageBackground
-            source={require('../assets/cerveja.png')}
+            source={require('../assets/pub.jpg')}
             style={{
               width: width * 0.9,
               height: width * 0.5,
@@ -251,7 +251,7 @@ export default function Places() {
           </View>
 
           <ImageBackground
-            source={require('../assets/cerveja.png')}
+            source={require('../assets/pub.jpg')}
             style={{
               width: width * 0.9,
               height: width * 0.5,
