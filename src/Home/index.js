@@ -6,7 +6,6 @@ import {
   Text,
   TouchableOpacity,
   ImageBackground,
-  StyleSheet,
   Dimensions,
   StatusBar,
 } from 'react-native';
@@ -14,8 +13,6 @@ import { useNavigation } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
 
 const width = Dimensions.get('window').width - 20;
-
-const categories = ['Próximo', 'Popular', 'Mais Barato', 'Musica', 'Família'];
 
 const menu = `
 <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,12 +56,15 @@ export default function Home() {
   const Bar = () => <SvgXml xml={bar} />;
   const Reactions = () => <SvgXml xml={reactions} />;
 
+  const [chat, setChat] = React.useState(false);
+
   return (
     <View style={{ backgroundColor: '#fff' }}>
       <View
         style={{
           backgroundColor: '#fff',
           width,
+          height: !chat ? 140 : Dimensions.get('window').height,
           marginTop: StatusBar.currentHeight,
           padding: 20,
           elevation: 3,
@@ -77,77 +77,220 @@ export default function Home() {
           <View style={{ alignItems: 'center' }}>
             <View
               style={{
-                width: 50,
-                height: 50,
+                paddingHorizontal: 10,
                 borderRadius: 25,
-                backgroundColor: '#949494',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginHorizontal: 5,
               }}
-            ></View>
+            >
+              <Profile />
+            </View>
             <Text style={{}}>Fulano</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <View
               style={{
-                width: 50,
-                height: 50,
+                paddingHorizontal: 10,
                 borderRadius: 25,
-                backgroundColor: '#949494',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginHorizontal: 5,
               }}
-            ></View>
+            >
+              <Profile />
+            </View>
             <Text style={{}}>Fulano</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <View
               style={{
-                width: 50,
-                height: 50,
+                paddingHorizontal: 10,
                 borderRadius: 25,
-                backgroundColor: '#949494',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginHorizontal: 5,
               }}
-            ></View>
+            >
+              <Profile />
+            </View>
             <Text style={{}}>Fulano</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <View
               style={{
-                width: 50,
-                height: 50,
+                paddingHorizontal: 10,
                 borderRadius: 25,
-                backgroundColor: '#949494',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginHorizontal: 5,
               }}
-            ></View>
+            >
+              <Profile />
+            </View>
             <Text style={{}}>Fulano</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <View
               style={{
-                width: 50,
-                height: 50,
+                paddingHorizontal: 10,
                 borderRadius: 25,
-                backgroundColor: '#949494',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginHorizontal: 5,
               }}
-            ></View>
+            >
+              <Profile />
+            </View>
             <Text style={{}}>Fulano</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <View
               style={{
-                width: 50,
-                height: 50,
+                paddingHorizontal: 10,
                 borderRadius: 25,
-                backgroundColor: '#949494',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginHorizontal: 5,
               }}
-            ></View>
+            >
+              <Profile />
+            </View>
             <Text style={{}}>Fulano</Text>
           </View>
         </ScrollView>
-        <TouchableOpacity style={{ marginTop: 25 }}>
+
+        {chat && (
+          <View
+            style={{
+              position: 'absolute',
+              top: 100,
+            }}
+          >
+            <View
+              style={{
+                width: width - 20,
+                padding: 10,
+                alignSelf: 'center',
+                justifyContent: 'space-between',
+                flexDirection: 'row',
+                elevation: 2,
+                marginTop: 10,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 9,
+                borderBottomLeftRadius: 9,
+                borderBottomRightRadius: 10,
+              }}
+            >
+              <TextInput
+                placeholder="Pesquisar"
+                style={{ fontSize: 17, paddingHorizontal: 10 }}
+              />
+            </View>
+
+            <Text style={{ marginTop: 15, marginBottom: 10 }}>Mensagens</Text>
+
+            <ScrollView showsVerticalScrollIndicator={false}>
+              <TouchableOpacity
+                style={{
+                  padding: 20,
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  borderBottomWidth: 1,
+                }}
+                onPress={() => Navigation.navigate('Chat')}
+              >
+                <Profile />
+
+                <View style={{}}>
+                  <Text style={{ fontWeight: 'bold' }}>Bar do Zé</Text>
+                  <Text>Vamos para o bar hoje?</Text>
+                </View>
+
+                <Text>22h</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={{
+                  padding: 20,
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  borderBottomWidth: 1,
+                }}
+                onPress={() => Navigation.navigate('Chat')}
+              >
+                <Profile />
+
+                <View style={{}}>
+                  <Text style={{ fontWeight: 'bold' }}>Fulano Hackathon</Text>
+                  <Text>Pode ser hoje mesmo!...</Text>
+                </View>
+
+                <Text>22h</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={{
+                  padding: 20,
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  borderBottomWidth: 1,
+                }}
+                onPress={() => Navigation.navigate('Chat')}
+              >
+                <Profile />
+
+                <View style={{}}>
+                  <Text style={{ fontWeight: 'bold' }}>Amigos</Text>
+                  <Text>Vamos para o bar hoje?</Text>
+                </View>
+
+                <Text>22h</Text>
+              </TouchableOpacity>
+
+              <View
+                style={{
+                  padding: 20,
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  borderBottomWidth: 1,
+                }}
+              >
+                <Profile />
+
+                <View style={{}}>
+                  <Text style={{ fontWeight: 'bold' }}>Amigos</Text>
+                  <Text>Vamos para o bar hoje?</Text>
+                </View>
+
+                <Text>22h</Text>
+              </View>
+
+              <View
+                style={{
+                  padding: 20,
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  borderBottomWidth: 1,
+                }}
+              >
+                <Profile />
+
+                <View style={{}}>
+                  <Text style={{ fontWeight: 'bold' }}>Amigos</Text>
+                  <Text>Vamos para o bar hoje?</Text>
+                </View>
+
+                <Text>22h</Text>
+              </View>
+            </ScrollView>
+          </View>
+        )}
+
+        <TouchableOpacity
+          style={{ marginTop: 25, padding: 2 }}
+          onPress={() => setChat(!chat)}
+        >
           <Bar />
         </TouchableOpacity>
       </View>

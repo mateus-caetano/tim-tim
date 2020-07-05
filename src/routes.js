@@ -7,6 +7,8 @@ import Home from './Home';
 import Places from './Places';
 import Place from './Place';
 import Reservations from './Reservations';
+import Order from './Order';
+import Chat from './Chat';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -49,8 +51,14 @@ export default function Routes() {
 
         <Stack.Screen
           name="Order"
-          component={Reservations}
+          component={Order}
           options={{ title: 'Pedir' }}
+        />
+
+        <Stack.Screen
+          name="Chat"
+          component={Chat}
+          options={{ title: 'Fulano Hackathon' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

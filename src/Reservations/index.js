@@ -126,7 +126,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -162,7 +167,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -210,7 +220,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -246,7 +261,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -281,7 +301,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -316,7 +341,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -351,7 +381,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -386,7 +421,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
@@ -422,7 +462,12 @@ export default function Reservations() {
             <View style={{ padding: 15 }}>
               <Text>Cerveja geladinha</Text>
 
-              <View style={{ flexDirection: 'row' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View
                   style={{
                     flexDirection: 'row',
